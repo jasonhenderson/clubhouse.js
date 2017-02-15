@@ -169,6 +169,13 @@ class Clubhouse {
     /**
      * @return {Promise}
      */
+    listMilestones(cb) {
+        return this.wrapCallback(cb, this.listResource('milestones'));
+    }
+
+    /**
+     * @return {Promise}
+     */
     listProjects(cb) {
         return this.wrapCallback(cb, this.listResource('projects'));
     }
